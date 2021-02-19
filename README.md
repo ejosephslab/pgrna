@@ -3,7 +3,7 @@
 
 
 
-## Here we have presented a computational tool in MATLAB and python for the design of polyvalent guide RNAs which is optimized for activity at multiple viral sites, while also avoiding interactions with the host genome or transcriptome.
+### Here we have presented a computational tool in MATLAB and python for the design of polyvalent guide RNAs which is optimized for activity at multiple viral sites, while also avoiding interactions with the host genome or transcriptome.
 
 ## Instructions for windows:
 
