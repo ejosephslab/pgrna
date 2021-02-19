@@ -15,7 +15,7 @@ Software needed to be installed for running the code in python
       - Using pip – If you are using pip, Pandas can also be installed using pip. pip is a package management system used to install and manage software packages/libraries written in Python. These files are stored in a large “on-line repository” termed as Python Package Index (PyPI). To install using pip type, !pip install pandas in the Jupyter Notebook App or type pip install pandas on windows command prompt (cmd).
 
 2) NCBI Standalone Blast
-- Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
+- Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
 - Set up the reference human genome database for the blast search using the command, makeblastdb -in GRCh38_latest_rna.fna/fasta_file -dbtype nucl -parse_seqids  -out Human_NCBI_rnadb/database_file. Add the created database to the system path.
 - Make the blastn query from the code (python) to find blast hits to the human transcriptomes/human DNA using subprocess call in windows.
 - Use the blastdbcmd command using subprocess call in windows from code(python) to retrieve the sequence parts from the created reference human transcriptome/ human DNA database.
