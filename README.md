@@ -51,13 +51,13 @@ The code can be run in following two ways:
 2) Running through the windows terminal - navigate to the folder containing the python/Cas13_pgRNA.py by typing in the terminal, cd path/to/ Cas13_pgRNA.py.
 Once you have navigated to the folder, run the python file in the windows terminal (cmd) by typing, python Cas13_pgRNA.py
 
-Common errors:
+### Common errors:
 
 1) ModuleNotFoundError: No module named 'pandas' when import pandas – Make sure you have pandas installed by typing pandas –-h in the windows terminal(cmd).
 2) ImportError: No module named RNA – Check your RNAfold installation by typing RNAfold –-h in windows terminal(cmd).
 3) BLAST Database error: No alias or index file found for nucleotide database – Make sure you have given the correct path to the database while making the blastn query from your python script.
 4) df_crRNA1["Free Energy"] = energy_list, length mismatch error, make sure you do not have a file named energyoutput.txt in the folder containg the python file/jupyter notebook file.
 
-Typical run time:
+### Typical run time:
 
 The run time depends on the length of the genome. For sars-cov-2 typical run time ranges from 1.5 - 2 hours.
