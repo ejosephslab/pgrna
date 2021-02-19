@@ -7,7 +7,7 @@ Here we have presented a computational tool in MATLAB and python for the design 
 
 Software needed to be installed for running the code in python
 1) Install Python for windows
-      Go to the Anaconda Distribution Page at [Anaconda Installation] (https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
+      Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
       Libraries that needed to be installed in Python to run the code
       pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
