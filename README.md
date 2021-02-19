@@ -3,11 +3,11 @@
 
 
 
-Here we have presented a computational tool in MATLAB and python for the design of polyvalent guide RNAs which is optimized for activity at multiple viral sites, while also avoiding interactions with the host genome or transcriptome.
+# Here we have presented a computational tool in MATLAB and python for the design of polyvalent guide RNAs which is optimized for activity at multiple viral sites, while also avoiding interactions with the host genome or transcriptome.
 
-Instructions for windows:
+## Instructions for windows:
 
-Software needed to be installed for running the code in python
+### Software needed to be installed for running the code in python:
 1) Install Python for windows
       Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
@@ -16,7 +16,7 @@ Software needed to be installed for running the code in python
       1) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
       - Using conda – Type, conda install pandas, in the windows command prompt (cmd).
       - Using pip – If you are using pip, Pandas can also be installed using pip. pip is a package management system used to install and manage software packages/libraries written in Python. These files are stored in a large “on-line repository” termed as Python Package Index (PyPI). To install using pip type, !pip install pandas in the Jupyter Notebook App or type pip install pandas on windows command prompt (cmd).
-      2) Biopython - It can be installed using pip and conda. Detailed instruction is available at [Biopython Installation](https://biopython.org/wiki/Packages)
+      2) Biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages)
 
 2) NCBI Standalone Blast
 - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
@@ -28,7 +28,7 @@ Software needed to be installed for running the code in python
 - Install the RNAfold installer compatible for your PC available through the website. Add the path of the package installation directory to your PATH variable manually.
 - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
 
-How the pgRNA design code works:
+### How the pgRNA design code works:
 
 Input
 1) To run the code, you need to provide an initial input in the form of a csv file which contains three columns mainly, potential gRNAs, their respective scores, and positions relative to a target sequence. The model input for SARS-CoV-2 DNA genome sequence is available for reference as CovidCasRxguides.csv:
@@ -44,7 +44,7 @@ Output will have two main elements:
 - High relative activity across clinical strain variants
 The model output can be referred at df_crRNA_withhits.csv.
 
-Running the code:
+### Running the code:
 
 The code can be run in following two ways:
 1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal (cmd on Windows). Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
