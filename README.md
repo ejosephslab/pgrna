@@ -11,11 +11,12 @@ Software needed to be installed for running the code in python
 1) Install Python for windows
       Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
-      Libraries that needed to be installed in Python to run the code
+      Libraries/packages that needed to be installed in Python to run the code:
       
-      pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
+      1) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
       - Using conda – Type, conda install pandas, in the windows command prompt (cmd).
       - Using pip – If you are using pip, Pandas can also be installed using pip. pip is a package management system used to install and manage software packages/libraries written in Python. These files are stored in a large “on-line repository” termed as Python Package Index (PyPI). To install using pip type, !pip install pandas in the Jupyter Notebook App or type pip install pandas on windows command prompt (cmd).
+      2) Biopython - It can be installed using pip and conda. Detailed instruction is available at [Biopython Installation](https://biopython.org/wiki/Packages)
 
 2) NCBI Standalone Blast
 - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
