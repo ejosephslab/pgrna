@@ -32,7 +32,7 @@
 
 Input
 1) To run the code, you need to provide an initial input in the form of a csv file which contains three columns mainly, potential gRNAs, their respective scores, and positions relative to a target sequence. The model input for SARS-CoV-2 DNA genome sequence is available for reference as CovidCasRxguides.csv:
-2) To run the Cutting Frequency Determination (CFD) calculations, you need to input two csv files for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv respectively. 
+2) To run the Cutting Frequency Determination (CFD) calculations, you need to input two csv files. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
 
 Output will have two main elements:
 
@@ -41,7 +41,7 @@ Output will have two main elements:
 - High relative activity at two homologous targets in a given viral sequence.
 - Low predicted relative activity at potential human “off-targets”.
 - Biophysical characteristics such as high GC content, direct repeats, secondary structure energy etc. that suggest high CRISPR activity for potential antiviral application.
-- High relative activity across clinical strain variants
+- High relative activity across clinical strain variants.
 The model output can be referred at df_crRNA_withhits.csv.
 
 ### Running the code:
