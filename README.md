@@ -42,6 +42,7 @@ Output will have two main elements:
 - Low predicted relative activity at potential human “off-targets”.
 - Biophysical characteristics such as high GC content, direct repeats, secondary structure energy etc. that suggest high CRISPR activity for potential antiviral application.
 - High relative activity across clinical strain variants.
+
 The model output can be referred at df_crRNA_withhits.csv.
 
 ### Running the code:
