@@ -3,7 +3,7 @@
 
 
 
-#### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, while also avoiding interactions with the host genome or transcriptome.
+#### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
 
 ## Instructions for windows:
 
@@ -20,7 +20,7 @@
 
 2) NCBI Standalone Blast
 - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
-- Set up the reference human genome database for the blast search using the command, makeblastdb -in GRCh38_latest_rna.fna/fasta_file -dbtype nucl -parse_seqids  -out Human_NCBI_rnadb/database_file. Add the created database to the system path.
+- Set up the reference genome or transcriptome database (e.g., from https://www.ncbi.nlm.nih.gov/genome/guide/human/) for the blast search using the command, makeblastdb -in GRCh38_latest_rna.fna/fasta_file -dbtype nucl -parse_seqids  -out Human_NCBI_rnadb/database_file. Add the created database to the system path.
 - Re-direct the blastn query from the code (python) to find blast hits to the human transcriptomes/human DNA using subprocess call in windows.
 - Use the blastdbcmd command using subprocess call in windows from code(python) to retrieve the sequence parts from the created reference human transcriptome/ human DNA database.
 
