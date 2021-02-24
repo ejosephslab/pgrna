@@ -5,28 +5,28 @@
 
 #### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
 
-## Instructions for windows:
+## Installation instructions
 
-### Software needed to be installed for running the code in python:
-1) Install Python for windows
+### Software needed to be installed for running the code in Python:
+
+1) Install Python 
       Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
       Libraries/packages that needed to be installed in Python to run the code:
       
       1) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
-      - Using conda – Type, conda install pandas, in the windows command prompt (cmd).
-      - Using pip – If you are using pip, Pandas can also be installed using pip. pip is a package management system used to install and manage software packages/libraries written in Python. These files are stored in a large “on-line repository” termed as Python Package Index (PyPI). To install using pip type, !pip install pandas in the Jupyter Notebook App or type pip install pandas on windows command prompt (cmd).
-      2) Biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages)
+      - Using conda – Type, conda install pandas, in the command prompt.
+      - Using pip – If you are using pip, type !pip install pandas in the Jupyter Notebook App or type pip install pandas in the command prompt.
+      2) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages)
 
-2) NCBI Standalone Blast
-- Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
-- Set up the reference genome or transcriptome database (e.g., from https://www.ncbi.nlm.nih.gov/genome/guide/human/) for the blast search using the command, makeblastdb -in GRCh38_latest_rna.fna/fasta_file -dbtype nucl -parse_seqids  -out Human_NCBI_rnadb/database_file. Add the created database to the system path.
-- Re-direct the blastn query from the code (python) to find blast hits to the human transcriptomes/human DNA using subprocess call in windows.
-- Use the blastdbcmd command using subprocess call in windows from code(python) to retrieve the sequence parts from the created reference human transcriptome/ human DNA database.
+      2) NCBI Standalone Blast
+      - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
+      - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI https://www.ncbi.nlm.nih.gov/genome/guide/human/) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
+      - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
-3) Vienna RNA Package
-- Install the RNAfold installer compatible for your PC available through the website. Add the path of the package installation directory to your PATH variable manually.
-- Use the subprocess call command from the script (python) to make queries in the RNAfold software.
+      3) Vienna RNA Package
+      - Install the RNAfold installer compatible for your operating system available at https://www.tbi.univie.ac.at/RNA/. Add the path of the package installation directory to your PATH variable manually.
+      - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
 
 ### How the pgRNA design code works:
 
@@ -38,18 +38,17 @@ Output will have two main elements:
 
 1) Initially it provides a csv containing homologous target pairs which are in the top quartile. The pairs are sorted according to the respective guide efficiency score. The model output is shown as a csv file, df_pairs_sorted_top_quartile.csv. 
 2) The final output is a csv file which gives a list of potential gRNAs with following characteristics:
-- High relative activity at two homologous targets in a given viral sequence.
-- Low predicted relative activity at potential human “off-targets”.
-- Biophysical characteristics such as high GC content, direct repeats, secondary structure energy etc. that suggest high CRISPR activity for potential antiviral application.
-- High relative activity across clinical strain variants.
+- High levels of predicted activity at two homeologous targets in a given viral genome.
+- Low predicted relative activity at potential host “off-targets”.
+- Biophysical characteristics such as high GC content, direct repeats, secondary structure free energy etc. that suggest high CRISPR activity for potential antiviral application.
 
 The model output can be referred at df_crRNA_withhits.csv.
 
 ### Running the code:
 
 The code can be run in following two ways:
-1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal (cmd on Windows). Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
-2) Running through the windows terminal - navigate to the folder containing the python/Cas13_pgRNA.py by typing in the terminal, cd path/to/ Cas13_pgRNA.py.
+1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal. Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
+2) Running through the Windows in the command terminal (cmd) - navigate to the folder containing the python/Cas13_pgRNA.py (or python/Cas9_pgRNA.py) by typing , cd path/to/ Cas13_pgRNA.py.
 Once you have navigated to the folder, run the python file in the windows terminal (cmd) by typing, python Cas13_pgRNA.py
 
 ### Common errors:
@@ -61,4 +60,4 @@ Once you have navigated to the folder, run the python file in the windows termin
 
 ### Typical run time:
 
-The run time depends on the length of the genome. For sars-cov-2 typical run time ranges from 1.5 - 2 hours.
+The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA virus), typical run time ranges from 1.5 - 2 hours.
