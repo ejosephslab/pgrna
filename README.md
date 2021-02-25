@@ -109,12 +109,12 @@ Massively parallel Cas13 screens reveal principles for guide RNA design. Nature 
 (3) Sanson, K. R., Hanna, R. E., Hegde, M., Donovan, K. F., Strand, C., Sullender, M. E., … Doench, J. G. (2018). Optimized libraries for CRISPR-Cas9 genetic screens with multiple modalities. Nature communications, 9(1), 5416.
 
 ---------------------------------------
- Last edit: February 25 2021
- Software versions 0.9.0
+ Last edit: February 25 2021  
+ Software versions 0.9.0  
  
- Josephs lab
- Department of Nanoscience
- Joint School of Nanoscience and Nanoengineering
+ Josephs lab  
+ Department of Nanoscience  
+ Joint School of Nanoscience and Nanoengineering  
  University of North Carolina at Greensboro
  
  *If you have any questions, comments, or issues, please contact Eric using the email address found in the accompanying manuscript.
