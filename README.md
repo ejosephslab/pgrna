@@ -39,12 +39,12 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
 ### How the pgRNA design code works:
 
 Input
-1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13 or https://cas13design.nygenome.org/) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as [CovidCasRxguides.csv](https://github.com/ejosephslab/pgrna/blob/main/README.md).
+1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13 or https://cas13design.nygenome.org/) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as [CovidCasRxguides.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/CovidCasRxguides.csv).
 2) You will need to edit the .py file to redirect the code to your input file by changing the line:
 ```
 df = pd.read_csv("Input/CovidCasRxguides.csv")
 ```
-3) To run the Cutting Frequency Determination (CFD) calculations, you also need to input two csv files in the Input directory. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
+3) To run the Cutting Frequency Determination (CFD) calculations, you also need to input two files provided in the Input folder. For example for Cas13d design, [Mismatch_Scores.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Mismatch_Scores.csv) and [Adjacent_Mismatch.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Adjacent_Mismatch.csv) is needed as input. 
 
 Output will have two main elements:
 
@@ -54,7 +54,7 @@ Output will have two main elements:
 - Low predicted relative activity at potential host “off-targets”.
 - Biophysical characteristics such as high GC content, direct repeats, secondary structure free energy etc. that suggest high CRISPR activity for potential antiviral application.
 
-The model output can be referred at df_crRNA_withhits.csv.
+The model output can be referred at [df_crRNA_withhits.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Output/df_crRNA_withhits.csv).
 
 ### Running the code:
 
