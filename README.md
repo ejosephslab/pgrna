@@ -56,9 +56,20 @@ python [Cas13pgRNA.py or Cas9pgRNA.py] [ViralcrRNA.csv] [hostdb]
 
 ### Common errors:
 
-1) ModuleNotFoundError: No module named 'pandas' when import pandas – Make sure you have pandas installed by typing pandas –-h in the windows terminal(cmd).
-2) ImportError: No module named RNA – Check your RNAfold installation by typing RNAfold –-h in windows terminal(cmd).
-3) BLAST Database error: No alias or index file found for nucleotide database – Make sure you have given the correct path to the database while making the blastn query from your python script.
+1) ModuleNotFoundError: No module named 'pandas' when import pandas – Make sure you have pandas installed by typing pandas –-h in the terminal(cmd).
+2) ImportError: No module named RNA – Check your RNAfold installation by typing RNAfold –-h in the terminal(cmd).
+3) BLAST Database error: No alias or index file found for nucleotide database – Make sure you have given the correct path to the database while making the blastn query from your python script. This has to be done at line 1022 in the Cas13_pgRNA.py file.
+```
+      # In[71]:
+
+
+      command = 'blastn -query out_pgRNA_filtered.fsa -task blastn-short -db C:/Users/18064/Documents/Blast/db/Human_NCBI_rnadb -outfmt "7 qacc sacc qstart qend sstart send" -out pgRNA_NCBI_blast.out'
+      subprocess.call(command, shell=True)
+
+
+      # In[72]:
+```
+      
 4) df_crRNA1["Free Energy"] = energy_list, length mismatch error, make sure you do not have a file named energyoutput.txt in the folder containg the python file/jupyter notebook file.
 
 ### Typical run time:
