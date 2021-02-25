@@ -6,6 +6,7 @@
 #### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
 
 This repository is intended to accompany our manuscript. For more information please refer to:
+
 Polyvalent Guide RNAs for CRISPR Antivirals
 Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayalew Ligaba-Osena, and Eric A. Josephs*
 
@@ -24,20 +25,20 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
       - Using pip – If you are using pip, type !pip install pandas in the Jupyter Notebook App or type pip install pandas in the command prompt.
       2) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages)
 
-      2) NCBI Standalone Blast
+      3) NCBI Standalone Blast
       - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
       - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI https://www.ncbi.nlm.nih.gov/genome/guide/human/) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
       - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
 
-      3) Vienna RNA Package
+     4) Vienna RNA Package
       - Install the RNAfold installer compatible for your operating system available at https://www.tbi.univie.ac.at/RNA/. Add the path of the package installation directory to your PATH variable manually.
       - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
 
 ### How the pgRNA design code works:
 
 Input
-1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13/-/tree/master) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as CovidCasRxguides.csv.
+1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13 or https://cas13design.nygenome.org/) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as CovidCasRxguides.csv.
 2) You will need to edit the .py file to redirect the code to your input file:
 ```
 df = pd.read_csv("Input/CovidCasRxguides.csv")
