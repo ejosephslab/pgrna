@@ -98,7 +98,7 @@ For example: C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna>python Cas13_pgRNA
 The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA virus), typical run time ranges from 1.5 - 2 hours.
 
 ---------------------------------------
-### Additional References:
+### References for CRISPR activity prediction used for inputs:
 
 (1) Hans-Hermann Wessels*, Alejandro Méndez-Mancilla*, Xinyi Guo, Mateusz Legut, Zharko Daniloski, Neville E. Sanjana. (2020)
 Massively parallel Cas13 screens reveal principles for guide RNA design. Nature Biotechnology. 38, 722–727.
