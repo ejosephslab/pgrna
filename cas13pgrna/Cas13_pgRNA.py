@@ -26,7 +26,7 @@ start = time.time()
 # In[4]:
 
 
-df = pd.read_csv("CovidCasRxguides.csv")
+df = pd.read_csv("Input/CovidCasRxguides.csv")
 df.head()
 
 
@@ -255,7 +255,7 @@ def gc_content(genome):
 # In[22]:
 
 
-df_mismatch = pd.read_csv("Mismatch_Scores.csv")
+df_mismatch = pd.read_csv("Input/Mismatch_Scores.csv")
 #df_mismatch
 
 
@@ -269,7 +269,7 @@ df_mismatch_scores
 # In[24]:
 
 
-df_adjacent_mismatch = pd.read_csv("Adjacent_Mismatch.csv")
+df_adjacent_mismatch = pd.read_csv("Input/Adjacent_Mismatch.csv")
 df_adjacent_mismatch
 
 
