@@ -16,6 +16,7 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
 ### Software needed to be installed for running the code in Python:
 
 1) Install Python 
+      
       Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
       Libraries/packages that needed to be installed in Python to run the code:
