@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# Code for Cas13_pgRNA version 0.1
+
 # In[2]:
 
 
@@ -1045,7 +1047,7 @@ for val in query_list:
     x = int(x)
     new_query_list.append(x)
 
-# Making a list of blast hits in human genome for the query sequences
+# Making a list of blast hits in host genome for the query sequences
 new_hit_list =[]
 for val in hits_list:
     x = val.split("\n")[0].split(" ")[1]
@@ -1217,7 +1219,7 @@ Blast_cfd_df.head()
 # In[91]:
 
 
-## Calculating the cfd score for the Human transcriptome region corresponding to blast hits
+## Calculating the cfd score for the host transcriptome region corresponding to blast hits
 x = len(Human_rangeRNA_list)
 cfd_humanBlast_list = []
 Activity_humanBlast_list = []
