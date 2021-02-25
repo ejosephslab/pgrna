@@ -37,9 +37,12 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
 ### How the pgRNA design code works:
 
 Input
-1) To run the code, you need to provide an initial input in the form of a csv file which contains three columns mainly, potential gRNAs, their respective scores, and positions relative to a target sequence. The model input for SARS-CoV-2 DNA genome sequence is available for reference as CovidCasRxguides.csv:
-2)  cas13designer, sgRNA design
-3) To run the Cutting Frequency Determination (CFD) calculations, you need to input two csv files. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
+1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13/-/tree/master) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as CovidCasRxguides.csv.
+2) You will need to edit the .py file to redirect the code to your input file:
+```
+df = pd.read_csv("Input/CovidCasRxguides.csv")
+```
+3) To run the Cutting Frequency Determination (CFD) calculations, you also need to input two csv files in the Input directory. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
 
 Output will have two main elements:
 
@@ -76,7 +79,7 @@ For example: C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna>python Cas13_pgRNA
 
 1) ModuleNotFoundError: No module named 'pandas' when import pandas – Make sure you have pandas installed by typing pandas –-h in the terminal(cmd).
 2) ImportError: No module named RNA – Check your RNAfold installation by typing RNAfold –-h in the terminal(cmd).
-3) BLAST Database error: No alias or index file found for nucleotide database – Make sure you have given the correct path to the database while making the blastn query from your python script. This has to be done at line 1022 in the Cas13_pgRNA.py file.
+3) BLAST Database error: No alias or index file found for nucleotide database – Make sure you have given the correct path to the database while making the blastn query from your python script. This has to be done, for example, at line 1022 in the Cas13_pgRNA.py file (here for a database named 'Human_NCBI_rnadb').
 ```
       # In[71]:
 
@@ -95,6 +98,16 @@ For example: C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna>python Cas13_pgRNA
 The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA virus), typical run time ranges from 1.5 - 2 hours.
 
 ---------------------------------------
+### Additional References:
+
+(1) Hans-Hermann Wessels*, Alejandro Méndez-Mancilla*, Xinyi Guo, Mateusz Legut, Zharko Daniloski, Neville E. Sanjana. (2020)
+Massively parallel Cas13 screens reveal principles for guide RNA design. Nature Biotechnology. 38, 722–727.
+
+(2) Doench, J. G., Fusi, N., Sullender, M., Hegde, M., Vaimberg, E. W., Donovan, K. F., … Root, D. E. (2016). Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9. Nature biotechnology, 34(2), 184-191.
+
+(3) Sanson, K. R., Hanna, R. E., Hegde, M., Donovan, K. F., Strand, C., Sullender, M. E., … Doench, J. G. (2018). Optimized libraries for CRISPR-Cas9 genetic screens with multiple modalities. Nature communications, 9(1), 5416.
+
+---------------------------------------
  Last edit: February 25 2021
  Software versions 0.9.0
  
@@ -103,4 +116,4 @@ The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA vi
  Joint School of Nanoscience and Nanoengineering
  University of North Carolina at Greensboro
  
- *If you have any questions, comments, or issues, please contact Eric at eajoseph@uncg.edu.
+ *If you have any questions, comments, or issues, please contact Eric using the email address found in the accompanying manuscript.
