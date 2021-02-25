@@ -50,7 +50,7 @@ The model output can be referred at df_crRNA_withhits.csv.
 
 Clone the repo by typing following command in the terminal
 ```
-git clone https://github.com/ejosephslab
+git clone https://github.com/ejosephslab/pgrna
 
 ```
 
