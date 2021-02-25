@@ -64,3 +64,10 @@ python [Cas13pgRNA.py or Cas9pgRNA.py] [ViralcrRNA.csv] [hostdb]
 ### Typical run time:
 
 The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA virus), typical run time ranges from 1.5 - 2 hours.
+
+---------------------------------------
+ Software version 0.1
+ 
+ If you spot any bug in our code or if you have any questions or comments, please contact eajoseph@uncg.edu.
+
+February 25 2020
