@@ -46,7 +46,7 @@ df = pd.read_csv("Input/CovidCasRxguides.csv")
 ```
 3) To run the Cutting Frequency Determination (CFD) calculations, you also need to input two files provided in the Input folder. For example for Cas13d design, [Mismatch_Scores.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Mismatch_Scores.csv) and [Adjacent_Mismatch.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Adjacent_Mismatch.csv) is needed as input. 
 ```
-# #### CFD Scoring part
+#### CFD Scoring part
 
 # In[22]:
 
