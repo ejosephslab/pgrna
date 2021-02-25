@@ -5,6 +5,11 @@
 
 #### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
 
+This repository is intended to accompany our manuscript. For more information please refer to:
+Polyvalent Guide RNAs for CRISPR Antivirals
+Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayalew Ligaba-Osena, and Eric A. Josephs*
+
+
 ## Installation instructions
 
 ### Software needed to be installed for running the code in Python:
@@ -90,8 +95,12 @@ For example: C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna>python Cas13_pgRNA
 The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA virus), typical run time ranges from 1.5 - 2 hours.
 
 ---------------------------------------
- Software version 0.1
+ Last edit: February 25 2021
+ Software versions 0.9.0
  
- If you spot any bug in our code or if you have any questions or comments, please contact eajoseph@uncg.edu.
-
-February 25 2021
+ Josephs lab
+ Department of Nanoscience
+ Joint School of Nanoscience and Nanoengineering
+ University of North Carolina at Greensboro
+ 
+ *If you have any questions, comments, or issues, please contact Eric at eajoseph@uncg.edu.
