@@ -48,7 +48,7 @@ df = pd.read_csv("Input/CovidCasRxguides.csv")
 
 Output will have two main elements:
 
-1) Initially it provides a csv containing homologous target pairs which are in the top quartile. The pairs are sorted according to the respective guide efficiency score. The model output is shown as a csv file, df_pairs_sorted_top_quartile.csv. 
+1) Initially it provides a csv containing homologous target pairs which are in the top quartile. The pairs are sorted according to the respective guide efficiency score. The model output is shown as a csv file, [df_pairs_sorted_top_quartile.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Output/df_pairs_sorted_top_quartile.csv). 
 2) The final output is a csv file which gives a list of potential gRNAs with following characteristics:
 - High levels of predicted activity at two homeologous targets in a given viral genome.
 - Low predicted relative activity at potential host “off-targets”.
