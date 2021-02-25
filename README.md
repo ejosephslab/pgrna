@@ -3,7 +3,7 @@
 
 
 
-#### A computational toolkit for the design of "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
+#### A computational tool to design "polyvalent" guide RNAs (pgRNAs) that are optimized for CRISPR activity at multiple viral sites, simultaneously, while also avoiding interactions with the host genome or transcriptome.
 
 This repository is intended to accompany our manuscript. For more information please refer to:
 
