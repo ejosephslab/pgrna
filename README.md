@@ -39,7 +39,7 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
 
 Input
 1) To run the code, you need to provide an initial input in the form of a csv file with three columns that contain: potential gRNAs, their predicted activity scores, and positions relative to a target sequence. Our code was designed to use the output files for cas13designer (https://gitlab.com/sanjanalab/cas13 or https://cas13design.nygenome.org/) (Ref. 1) and GPP sgRNA Design tool (https://portals.broadinstitute.org/gpp/public/) (Refs. 2 and 3) for RfxCas13d and SpyCas9, respectively. A model input for SARS-CoV-2 DNA genome sequence is provided as an example as CovidCasRxguides.csv.
-2) You will need to edit the .py file to redirect the code to your input file:
+2) You will need to edit the .py file to redirect the code to your input file by changing the line:
 ```
 df = pd.read_csv("Input/CovidCasRxguides.csv")
 ```
