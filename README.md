@@ -45,7 +45,24 @@ Input
 df = pd.read_csv("Input/CovidCasRxguides.csv")
 ```
 3) To run the Cutting Frequency Determination (CFD) calculations, you also need to input two files provided in the Input folder. For example for Cas13d design, [Mismatch_Scores.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Mismatch_Scores.csv) and [Adjacent_Mismatch.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Input/Adjacent_Mismatch.csv) is needed as input. 
+```
+# #### CFD Scoring part
 
+# In[22]:
+
+df_mismatch = pd.read_csv("Input/Mismatch_Scores.csv")
+#df_mismatch
+
+# In[23]:
+
+df_mismatch_scores = df_mismatch.set_index('Pair')
+df_mismatch_scores
+
+# In[24]:
+
+df_adjacent_mismatch = pd.read_csv("Input/Adjacent_Mismatch.csv")
+df_adjacent_mismatch
+```
 Output will have two main elements:
 
 1) Initially it provides a csv containing homologous target pairs which are in the top quartile. The pairs are sorted according to the respective guide efficiency score. The model output is shown as a csv file, [df_pairs_sorted_top_quartile.csv](https://github.com/ejosephslab/pgrna/blob/main/cas13pgrna/Output/df_pairs_sorted_top_quartile.csv). 
