@@ -70,4 +70,4 @@ The run time depends on the length of the genome. For SARS-CoV-2 (a large RNA vi
  
  If you spot any bug in our code or if you have any questions or comments, please contact eajoseph@uncg.edu.
 
-February 25 2020
+February 25 2021
