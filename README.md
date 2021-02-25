@@ -24,11 +24,11 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
       1) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
       - Using conda – Type, conda install pandas, in the command prompt.
       - Using pip – If you are using pip, type !pip install pandas in the Jupyter Notebook App or type pip install pandas in the command prompt.
-      2) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages)
+      2) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages).
 
       3) NCBI Standalone Blast
       - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
-      - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI https://www.ncbi.nlm.nih.gov/genome/guide/human/) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
+      - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI [Human Genome Sequences] (https://www.ncbi.nlm.nih.gov/genome/guide/human/)) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
       - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
 
