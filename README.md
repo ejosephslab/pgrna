@@ -53,8 +53,12 @@ Clone the repo by typing following command in the terminal
 git clone https://github.com/ejosephslab/pgrna
 
 ```
+Navigate to the folder,cas13pgrna/cas9pgrna containing the python files/Cas13_pgRNA.py or Cas9pgRNA.py or the jupyter notebook files/Cas13_pgRNA.ipynb or Cas9_pgRNA.ipynb
+```
+cd path/to/cas13pgrna
 
-
+For example: cd C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna
+```
 
 The code can be run in following two ways:
 1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal. Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
