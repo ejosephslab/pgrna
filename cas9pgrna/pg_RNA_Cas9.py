@@ -4,7 +4,7 @@
 # In[14]:
 
 
-# Reading the csv file for gRNA for HPV16
+# Reading the csv file for gRNA (for HPV16 in our example)
 import pandas as pd 
 import re
 import os
@@ -15,10 +15,10 @@ import pickle
 # In[15]:
 
 
-from Bio import SeqIO
-for sequence in SeqIO.parse('HPV16.fasta', "fasta"):
+# from Bio import SeqIO
+# for sequence in SeqIO.parse('HPV16.fasta', "fasta"):
     #print(sequence.seq)
-    print(len(sequence),'nuceoliotides')
+#    print(len(sequence),'nuceoliotides')
 
 
 # In[16]:
