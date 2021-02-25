@@ -7,9 +7,9 @@
 
 This repository is intended to accompany our manuscript. For more information please refer to:
 
-Polyvalent Guide RNAs for CRISPR Antivirals
-Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayalew Ligaba-Osena, and Eric A. Josephs*
-
+Polyvalent Guide RNAs for CRISPR Antivirals  
+Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayalew Ligaba-Osena, and Eric A. Josephs*  
+(url goes here)
 
 ## Installation instructions
 
