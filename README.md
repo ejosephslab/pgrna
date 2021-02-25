@@ -24,6 +24,7 @@
       - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI https://www.ncbi.nlm.nih.gov/genome/guide/human/) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
       - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
+
       3) Vienna RNA Package
       - Install the RNAfold installer compatible for your operating system available at https://www.tbi.univie.ac.at/RNA/. Add the path of the package installation directory to your PATH variable manually.
       - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
@@ -32,7 +33,8 @@
 
 Input
 1) To run the code, you need to provide an initial input in the form of a csv file which contains three columns mainly, potential gRNAs, their respective scores, and positions relative to a target sequence. The model input for SARS-CoV-2 DNA genome sequence is available for reference as CovidCasRxguides.csv:
-2) To run the Cutting Frequency Determination (CFD) calculations, you need to input two csv files. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
+2)  cas13designer, sgRNA design
+3) To run the Cutting Frequency Determination (CFD) calculations, you need to input two csv files. For example for Cas13d design, Mismatch_Scores.csv and Adjacent_Mismatch.csv is needed as input. 
 
 Output will have two main elements:
 
@@ -49,7 +51,8 @@ The model output can be referred at df_crRNA_withhits.csv.
 The code can be run in following two ways:
 1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal. Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
 2) Running through the Windows in the command terminal (cmd) - navigate to the folder containing the python/Cas13_pgRNA.py (or python/Cas9_pgRNA.py) by typing , cd path/to/ Cas13_pgRNA.py.
-Once you have navigated to the folder, run the python file in the windows terminal (cmd) by typing, python Cas13_pgRNA.py
+Once you have navigated to the folder, run the python file in the windows terminal (cmd) by typing, 
+python [Cas13pgRNA.py or Cas9pgRNA.py] [ViralcrRNA.csv] [hostdb]
 
 ### Common errors:
 
