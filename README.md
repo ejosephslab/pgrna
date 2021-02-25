@@ -28,12 +28,12 @@ Rammyani Bagchi, Rachel Tinker-Kulberg, Tinku Supakar, Sydney Chamberlain, Ayale
 
       3) NCBI Standalone Blast
       - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
-      - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI [Human Genome Sequences](https://www.ncbi.nlm.nih.gov/genome/guide/human/)) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb 
+      - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI, [Human Genome Sequences](https://www.ncbi.nlm.nih.gov/genome/guide/human/)) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb. 
       - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
 
      4) Vienna RNA Package
-      - Install the RNAfold installer compatible for your operating system available at https://www.tbi.univie.ac.at/RNA/. Add the path of the package installation directory to your PATH variable manually.
+      - Install the RNAfold installer compatible for your operating system available at [The ViennaRNA Package](https://www.tbi.univie.ac.at/RNA/). Add the path of the package installation directory to your PATH variable manually.
       - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
 
 ### How the pgRNA design code works:
