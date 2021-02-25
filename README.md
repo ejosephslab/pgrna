@@ -60,12 +60,13 @@ cd path/to/cas13pgrna
 For example: cd C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna
 ```
 
-The code can be run in following two ways:
-1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing in a terminal. Change the Jupyter Notebook startup folder by using the command cd /the_folder_name in the command prompt (Windows). Once Jupyter Notebook is launched, it will automatically open a browser window and will show the following page. Click on new and then on “Python 3”. Run each cell in the jupyter notebook to get all the outputs.
-2) Running through the Windows in the command terminal (cmd) - navigate to the folder containing the python/Cas13_pgRNA.py (or python/Cas9_pgRNA.py) by typing , cd path/to/ Cas13_pgRNA.py.
-Once you have navigated to the folder, run the python file in the windows terminal (cmd) by typing, 
-python [Cas13pgRNA.py or Cas9pgRNA.py] [ViralcrRNA.csv] [hostdb]
+The code can be then run in following two ways:
+1) Run in the Jupyter Notebook - The Jupyter Notebook App can be launched by typing jupyter notebook in the terminal. Once Jupyter Notebook is launched, it will automatically open a browser window and will show all the files in cas13pgrna/cas9pgrna folder. Click on Cas13_pgRNA.ipynb file. Run each cell in that notebook file to get all the outputs.
+2) Running in the terminal/cmd for windows - Run the python file in the terminal (cmd) by typing, python Cas13_pgRNA.py or Cas9_pgRNA.py
 
+```
+For example: C:\Users\tinku\Documents\GitHub\pgrna\cas13pgrna>python Cas13_pgRNA.py
+```
 ### Common errors:
 
 1) ModuleNotFoundError: No module named 'pandas' when import pandas – Make sure you have pandas installed by typing pandas –-h in the terminal(cmd).
