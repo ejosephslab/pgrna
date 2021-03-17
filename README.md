@@ -15,25 +15,24 @@ doi: https://doi.org/10.1101/2021.02.25.430352
 
 ### Software needed to be installed for running the code in Python:
 
-# Install Python 
+1) Install Python 
       
       - Go to the Anaconda Distribution Page at [Anaconda Installation](https://www.anaconda.com/products/individual). Click Download and select the latest Python version. Please ensure that you check the box that says "add to PATH" when installing on PC.
 
       Libraries/packages that needed to be installed in Python to run the code:
       
-      1) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
+      a) pandas - pandas library is available as a part of the latest anaconda package. It can also be installed using conda and pip, the two main tools that install python packages.
       - Using conda – Type, conda install pandas, in the command prompt.
       - Using pip – If you are using pip, type !pip install pandas in the Jupyter Notebook App or type pip install pandas in the command prompt.
       
-      2) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages).
+      b) biopython - It can be installed using pip and conda. Detailed instructions is available at [Biopython Installation](https://biopython.org/wiki/Packages).
 
- # NCBI Standalone Blast
+2) NCBI Standalone Blast
       - Download and install BLAST 2.8.1+ installer for your machine which is available from NCBI at [Blast Executables](https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/).
       - Set up a searchable database for the Blast search of the host genome or transcriptome (e.g., from the NCBI, [Human Genome Sequences](https://www.ncbi.nlm.nih.gov/genome/guide/human/)) using the command (for host genome or transcriptome in FASTA format, here named hostdb): makeblastdb -in hostdb.fna -dbtype nucl -parse_seqids  -out hostdb. 
       - Add the created database to the system path, and re-direct the blastn query from the code (python) to find blast hits to the directory with the host database.
 
-
-# Vienna RNA Package
+3) Vienna RNA Package
       - Install the RNAfold installer compatible for your operating system available at [The ViennaRNA Package](https://www.tbi.univie.ac.at/RNA/). Add the path of the package installation directory to your PATH variable manually.
       - Use the subprocess call command from the script (python) to make queries in the RNAfold software.
 
